@@ -1,0 +1,6 @@
+# 本地环境
+NODE_ENV = 'development'
+# 接口地址
+VUE_APP_BASE_API = 'http://api-gen.sadais.com'
+# 是否开启mock
+VUE_APP_MOCK = true

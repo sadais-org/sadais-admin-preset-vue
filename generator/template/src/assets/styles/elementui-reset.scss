@@ -1,0 +1,80 @@
+/*
+ * @Author: zhangzhenfei
+ * @Date: 2021-12-01 14:51:37
+ * @LastEditTime: 2021-12-10 15:23:18
+ * @LastEditors: zhangzhenfei
+ * @Description: elementui的样式覆盖
+ * @FilePath: /sadais-admin/src/assets/styles/elementui-reset.scss
+ */
+
+ // 分割线颜色
+ .el-divider__text {
+   color: #999999;
+ }
+
+ // 修复中间分割符显示不全的问题
+ .el-date-editor .el-range-separator {
+   width: auto;
+ }
+
+// 表格样式覆盖（按效果图定制）
+.el-table {
+  color: rgba(0, 0, 0, 0.65);
+  th {
+    background: #fafafa;
+  }
+  .el-table__header {
+    background: #fafafa;
+    .cell {
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+
+  // 表格样式覆盖
+  .cell .el-button {
+    // 增加删除样式
+    &.el-button--text {
+      padding: 5px 0;
+      // 删除样式
+      &.del {
+        color: rgba(0, 0, 0, 0.45);
+        &:hover {
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+  }
+  // 文本样式按钮增加分割线
+  .cell .operate-button {
+    .el-button + .el-button--text,
+    &.mini-split {
+      position: relative;
+      padding-left: 12px;
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 1px;
+        height: 14px;
+        content: '';
+        background: #e9e9e9;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .cell .column-button .el-button {
+    display: block;
+    margin-left: 0;
+  }
+
+  .cell-wrap > .cell {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .row-wrap:hover > td {
+    background: unset !important;
+  }
+}

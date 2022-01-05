@@ -1,0 +1,21 @@
+$file-host: '~@/src/assets/img/';
+
+$primary-color: #009DFF;
+$body-bg: #f8f8f8;
+$body-color: #333333;
+$nav-height: 64px;
+$side-bar-width: 256px;
+$side-bar-width-short: 56px;
+
+
+// The :export directive is the magic sauce for webpack
+// https://mattferderer.com/use-sass-variables-in-typescript-and-javascript
+/* stylelint-disable */
+:export {
+  primaryColor: $primary-color;
+  bodyBg: $body-bg;
+  bodyColor: $body-color;
+  navHeight: $nav-height;
+  sideBarWidth: $side-bar-width;
+  sideBarWidthShort: $side-bar-width-short;
+}

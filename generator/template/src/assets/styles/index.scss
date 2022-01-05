@@ -1,0 +1,91 @@
+@import './elementui-reset.scss';
+@import '@sadais/piui-console/scss/index.scss';
+@import '~element-ui/lib/theme-chalk/index.css';
+@import './transition.scss';
+
+// 以下是公用样式
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+body {
+  height: 100%;
+  color: $body-color;
+}
+
+a,a:focus,a:hover {
+  text-decoration: none;
+  outline: none;
+  color: $body-color;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  cursor: pointer;
+  background: #f2f2f2;
+  border-radius: 40px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: rgba(11, 101, 209, 0.3);
+  border-radius: 40px;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.scroll-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden auto;
+}
+
+.main-panel-container {
+  background: #ffffff;
+  padding: 12px;
+  height: 100%;
+}
+
+// 覆盖piui-console的样式
+.pi-scroll {
+  background: #ffffff;
+  overflow: hidden auto;
+}
+
+.pi-cursor-pointer {
+  cursor: pointer;
+}
+
+// 自定义进度条颜色
+#nprogress .bar {
+  background: $primary-color !important;
+}
+
+.edit-form {
+  min-width: 500px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tip {
+  color: #999;
+}
