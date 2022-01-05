@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangzhenfei
  * @Date: 2021-12-16 10:50:38
- * @LastEditTime: 2022-01-04 14:28:09
+ * @LastEditTime: 2022-01-05 10:23:41
  * @LastEditors: zhangzhenfei
  * @Description: 面包屑
  * @FilePath: /sadais-admin-preset-vue/generator/template/src/layout/components/breadcrumb/index.vue
@@ -23,7 +23,6 @@
 <script lang="ts">
 import { IResource } from '@/typings/modules/resource'
 import { Component, Vue } from 'vue-property-decorator'
-import { RouteRecord } from 'vue-router'
 
 @Component({
   name: 'Breadcrumb'

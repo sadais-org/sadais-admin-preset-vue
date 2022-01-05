@@ -43,6 +43,7 @@ module.exports = (api, options, rootOptions) => {
       'store': '^2.0.12',
       'vuex-module-decorators': '^1.2.0',
       'mockjs': '^1.1.0',
+      'svg-sprite-loader': '^6.0.11',
     },
   });
 
@@ -50,6 +51,8 @@ module.exports = (api, options, rootOptions) => {
 
   api.postProcessFiles((files) => {
     delete files['src/views/Home.vue'];
+    delete files['src/components/HelloWorld.vue'];
+    
   })
 
 

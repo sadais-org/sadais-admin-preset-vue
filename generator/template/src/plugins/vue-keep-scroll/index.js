@@ -2,8 +2,10 @@ import debounce from 'lodash/debounce'
 
 const attrName = "data-scroll-position";
 export default {
+  // @ts-ignore
   install(Vue) {
     Vue.directive("keep-scroll", {
+      // @ts-ignore
       bind(el, binding, vnode) {
         // 兼容el-table，表格内滚动
         if(el.classList.contains('el-table')) {
@@ -17,6 +19,7 @@ export default {
         }, 50) , false);
 
         // 初始化滚动位置
+        // @ts-ignore
         const restore = (el, attr) => {
           setTimeout(() => {
             // 设置延时，等待vue渲染完成
@@ -29,6 +32,7 @@ export default {
         vnode.context.$on("hook:activated", () => {
           const refs = el.parentElement.querySelectorAll(`[${attrName}]`);
           [].forEach.call(refs, ref => {
+            // @ts-ignore
             const attr = ref.getAttribute(attrName);
             attr && restore(ref, attr);
           });
